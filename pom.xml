@@ -1,45 +1,18 @@
-# Arquitetura Client-Test model
-### JDK Usado: 17
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-## Estrutura do Projeto
-![img_1.png](img_1.png)
+    <groupId>org.example</groupId>
+    <artifactId>projeto-aula-01</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-
-### Client
-Classe com configurações para realizar requisições http.  
-Configuração, body, tipo de requisição
-
-### Data
-Classes responsáveis pela gestão de massa de dados.
-
-### Model
-Classe com os objetos com atributos de requisição e resposta
-
-### Specs
-Request e Response Specifications
-- Consistência: Mantém os testes organizados e consistentes.
-- Reutilização: Permite a reutilização de código comum em múltiplos testes.
-
-Request Specification:  
-● Define pré-configurações para os requests.
-
-Response Specification:  
-● Define Expectativas para as respostas.
-
-### Utils
-Package com classes uteis.  
-**Exemplo**: Manipulation, classe responsável por ler um arquivo .properties.
-Arquivo.properties será usado para guardar informações sensíveis como email e senha.
-### Nomeando metodos
-```java
-@Test
-public void testGetUsuarioPorIDComSucesso(){
-    // Logica
-}
-```
-
-### Depencicias para o projeto
-````pom
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 <dependencies>
     <dependency>
         <groupId>io.rest-assured</groupId>
@@ -83,4 +56,4 @@ public void testGetUsuarioPorIDComSucesso(){
         <scope>test</scope>
     </dependency>
 </dependencies>
-````
+</project>
