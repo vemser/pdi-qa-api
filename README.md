@@ -37,9 +37,7 @@ public void testGetUsuarioPorIDComSucesso(){
     // Logica
 }
 ```
-````Java
-    public static String pageValidation = "body > section > div > div.row > div.col-sm-9.padding-right > div > h2";
-````
+
 ### Depencicias para o projeto
 ````pom
 <dependencies>
