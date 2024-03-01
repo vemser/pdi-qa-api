@@ -18,7 +18,7 @@ pipeline {
         stage('Generate and Serve Allure Report') {
             steps {
                 script {
-                    bat "allure generate allure-results -o allure-report"
+                    bat "allure generate allure-results -o allure-report --clean"
 
                     bat "allure open allure-report"
                 }
@@ -39,8 +39,11 @@ pipeline {
                 def buildNumber = env.BUILD_NUMBER
 
                 def message = "# Relatorio de Testes/API PDI\n"
+               message += "**Branch:** RELEASE\n"
+               message += "**Build:** ${buildNumber}\n"
+               message += "**Status:** ${buildResult}\n"
 
-            discordSend description: "Jenkins Pipeline Build", footer: "Footer Text", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME,
+            discordSend description: message
                     webhookURL: "https://discord.com/api/webhooks/1212758842560090172/7aBSJN1WFHafMg8OQ8lbKcQyPoKC6NzgZCVcGWojZ_4CTZkzuo0LpenVGdx3kqRf80Hz"
             }
         }
