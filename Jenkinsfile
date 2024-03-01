@@ -11,7 +11,7 @@ pipeline {
         stage('Build and Test with Maven') {
             steps {
                 script {
-                    bat 'mvn test'
+                    bat 'mvn -e clean test'
                 }
             }
         }
@@ -20,7 +20,6 @@ pipeline {
                 script {
                     bat "allure generate allure-results -o allure-report --clean"
                    archiveArtifacts 'allure-report/**'
-
                 }
             }
         }
