@@ -13,7 +13,7 @@ pipeline {
                 tool 'Maven'
 
                 script {
-                    def mavenHome = tool 'Maven'
+                    def mavenHome = tool 'maven 3.9.3'
                     def mavenCMD = "${mavenHome}/bin/mvn"
 
                     sh "${mavenCMD} -e clean test -Dmaven.test.failure.ignore=true"
