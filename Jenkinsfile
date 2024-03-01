@@ -5,8 +5,8 @@ pipeline {
 
         stage('Hello world') {
             steps {
-            script{
-                echo 'hello world'
+                script{
+                    bat 'mvn -e clean test -Dmaven.test.failure.ignore=true'
                 }
             }
         }
