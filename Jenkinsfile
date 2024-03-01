@@ -11,7 +11,7 @@ pipeline {
         stage('Build and Test with Maven') {
             steps {
                 script {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
