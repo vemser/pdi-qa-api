@@ -61,6 +61,11 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.automatedowl</groupId>
+            <artifactId>allure-environment-writer</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
