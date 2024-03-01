@@ -25,4 +25,19 @@ pipeline {
             }
         }
     }
+   post {
+       always {
+           allure(
+               includeProperties: false,
+               jdk: '',
+               results: [[path: 'allure-results']]
+           )
+           script {
+               def message = "# Relatorio de Testes/API Chronos\n"
+               discordSend description: message,
+                   webhookURL: "https://discord.com/api/webhooks/1212758842560090172/7aBSJN1WFHafMg8OQ8lbKcQyPoKC6NzgZCVcGWojZ_4CTZkzuo0LpenVGdx3kqRf80Hz"
+           }
+       }
+   }
+
 }
