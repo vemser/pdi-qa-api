@@ -1,8 +1,14 @@
 pipeline {
     agent any
+    stage('Checkout') {
+           steps {
+               script {
+                   checkout scm
+               }
+           }
+    }
 
     stages {
-
         stage('Hello world') {
             steps {
                 script{
@@ -10,7 +16,5 @@ pipeline {
                 }
             }
         }
-
-        // ...
     }
 }
