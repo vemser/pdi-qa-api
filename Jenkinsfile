@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the source code from the version control system
                 checkout scm
             }
         }
@@ -12,10 +11,6 @@ pipeline {
         stage('Build and Test with Maven') {
             steps {
                 script {
-                    // Set up Maven
-                    tool 'Maven'
-
-                    // Run Maven command
                     sh 'mvn -e clean test'
                 }
             }
