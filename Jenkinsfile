@@ -18,7 +18,7 @@ pipeline {
         stage('Generate and Serve Allure Report') {
             steps {
                 script {
-                    bat "allure generate allure-results -o allure-report --clean"
+                    bat "allure generate allure-results -o allure-report"
                    archiveArtifacts 'allure-report/**'
                 }
             }
