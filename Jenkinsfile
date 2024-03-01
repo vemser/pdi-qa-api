@@ -33,8 +33,17 @@ pipeline {
                results: [[path: 'allure-results']]
            )
            script {
-               def message = "# Relatorio de Testes/API Chronos\n"
-               discordSend description: message,
+                          def buildUrl = env.BUILD_URL
+                          def buildResult = currentBuild.currentResult
+                          def branchName = env.BRANCH_NAME
+                          def buildNumber = env.BUILD_NUMBER
+
+               def message = "# Relatorio de Testes/API PDI\n"
+
+               discordSend
+               description: message,
+                link: buildUrl,
+                result: buildResult
                    webhookURL: "https://discord.com/api/webhooks/1212758842560090172/7aBSJN1WFHafMg8OQ8lbKcQyPoKC6NzgZCVcGWojZ_4CTZkzuo0LpenVGdx3kqRf80Hz"
            }
        }
