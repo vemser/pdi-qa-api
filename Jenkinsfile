@@ -15,5 +15,14 @@ pipeline {
                 }
             }
         }
+        stage('Generate and Serve Allure Report') {
+            steps {
+                script {
+                    bat "allure generate allure-results -o allure-report"
+
+                    bat "allure open allure-report"
+                }
+            }
+        }
     }
 }
