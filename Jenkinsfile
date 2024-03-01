@@ -10,13 +10,8 @@ pipeline {
 
         stage('Build test maven') {
             steps {
-                tool 'Maven'
-
                 script {
-                    def mavenHome = tool 'maven 3.9.3'
-                    def mavenCMD = "${mavenHome}/bin/mvn"
-
-                    sh "${mavenCMD} -e clean test -Dmaven.test.failure.ignore=true"
+                    sh "mvn -e clean test -Dmaven.test.failure.ignore=true"
                 }
             }
         }
