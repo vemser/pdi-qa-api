@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script {
                     bat "allure generate allure-results -o allure-report --clean"
+                   archiveArtifacts 'allure-report/**'
 
-                    bat "allure open allure-report"
                 }
             }
         }
