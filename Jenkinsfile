@@ -40,12 +40,8 @@ pipeline {
 
                 def message = "# Relatorio de Testes/API PDI\n"
 
-                discordSend(
-                    description: message,
-                    link: buildUrl,
-                    result: buildResult,
+            discordSend description: "Jenkins Pipeline Build", footer: "Footer Text", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME,
                     webhookURL: "https://discord.com/api/webhooks/1212758842560090172/7aBSJN1WFHafMg8OQ8lbKcQyPoKC6NzgZCVcGWojZ_4CTZkzuo0LpenVGdx3kqRf80Hz"
-                )
             }
         }
     }
