@@ -43,7 +43,7 @@ pipeline {
                message += "**Build:** ${buildNumber}\n"
                message += "**Status:** ${buildResult}\n"
 
-            discordSend description: message
+            discordSend description: message,
                     webhookURL: "https://discord.com/api/webhooks/1212758842560090172/7aBSJN1WFHafMg8OQ8lbKcQyPoKC6NzgZCVcGWojZ_4CTZkzuo0LpenVGdx3kqRf80Hz"
             }
         }
