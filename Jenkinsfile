@@ -38,8 +38,8 @@ pipeline {
                 def branchName = env.BRANCH_NAME
                 def buildNumber = env.BUILD_NUMBER
 
-                def message = "# Relatorio de Testes/API PDI\n"
-               message += "**Branch:** RELEASE\n"
+                def message = "# TESTE Relatorio de Testes/API PDI\n"
+               message += "**Branch:** docs/jenkins-test\n"
                message += "**Build:** ${buildNumber}\n"
                message += "**Status:** ${buildResult}\n"
 

@@ -8,8 +8,8 @@ public class TesteJenkinsFuncionalTest {
     public void testExemplo(){
         Assert.assertEquals(2,1+1);
     }
-    @Test
-    public void testExemploFalho(){
-        Assert.assertEquals(2,1+2);
-    }
+//    @Test
+//    public void testExemploFalho(){
+//        Assert.assertEquals(2,1+2);
+//    }
 }
