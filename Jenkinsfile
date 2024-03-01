@@ -1,18 +1,22 @@
 pipeline {
     agent any
-    stage('Checkout') {
-           steps {
-               script {
-                   checkout scm
-               }
-           }
-    }
 
     stages {
-        stage('Hello world') {
+        stage('Checkout') {
             steps {
-                script{
-                    bat 'mvn -e clean test -Dmaven.test.failure.ignore=true'
+                checkout scm
+            }
+        }
+
+        stage('Build test maven') {
+            steps {
+                tool 'Maven'
+
+                script {
+                    def mavenHome = tool 'Maven'
+                    def mavenCMD = "${mavenHome}/bin/mvn"
+
+                    sh "${mavenCMD} -e clean test -Dmaven.test.failure.ignore=true"
                 }
             }
         }
