@@ -1,0 +1,1117 @@
+{
+	"info": {
+		"_postman_id": "9facf809-28cb-4c7a-8edd-490f39e699d8",
+		"name": "Testes de API",
+		"description": "Aqui é reunido todos os cenários de testes válidos e inválidos por cada endpoint da aplicação SDI - Vem Ser - Edição 13.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21667432",
+		"_collection_link": "https://www.postman.com/universal-star-423245/workspace/grupo-06-sdi-vemser/collection/21667432-9facf809-28cb-4c7a-8edd-490f39e699d8?action=share&source=collection_link&creator=21667432"
+	},
+	"item": [
+		{
+			"name": "vemser/pdi",
+			"item": [
+				{
+					"name": "Acompanhamento",
+					"item": [
+						{
+							"name": "válidos [3]",
+							"item": [
+								{
+									"name": "Listar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"acompanhamento",
+												"listarAcompanhamentos"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "1",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Listar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=&size=",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"acompanhamento",
+												"listarAcompanhamentos"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": ""
+												},
+												{
+													"key": "size",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Listar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=1&size=1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"acompanhamento",
+												"listarAcompanhamentos"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "inválidos [3]",
+							"item": [
+								{
+									"name": "Listar todos - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=-1&size=-1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"acompanhamento",
+												"listarAcompanhamentos"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "-1"
+												},
+												{
+													"key": "size",
+													"value": "-1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Listar todos - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page= &size= ",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"acompanhamento",
+												"listarAcompanhamentos"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": " "
+												},
+												{
+													"key": "size",
+													"value": " "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Listar todos - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=a&size=a",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"acompanhamento",
+												"listarAcompanhamentos"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "a"
+												},
+												{
+													"key": "size",
+													"value": "a"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "Como usuário do sistema, tendo cargo de GP, quero ter acesso a funcionalidade de visualizar o histórico de todos os agendamentos já realizados com participantes do programa VEM SER."
+				},
+				{
+					"name": "Estagiário",
+					"item": [
+						{
+							"name": "Obter informações do estagiário",
+							"item": [
+								{
+									"name": "válidos [1]",
+									"item": [
+										{
+											"name": "Obter relatório - VÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"relatorio-cliente",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "3"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "inválidos [3]",
+									"item": [
+										{
+											"name": "Obter relatório - INVÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"relatorio-cliente",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": ""
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Obter relatório - INVÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"relatorio-cliente",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-1"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Obter relatório - INVÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"relatorio-cliente",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Buscar todos estagiários",
+							"item": [
+								{
+									"name": "válidos [4]",
+									"item": [
+										{
+											"name": "Buscar todos - VÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "",
+															"disabled": true
+														},
+														{
+															"key": "size",
+															"value": "",
+															"disabled": true
+														},
+														{
+															"key": "name",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Buscar todos - VÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=&size=&name=",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": ""
+														},
+														{
+															"key": "size",
+															"value": ""
+														},
+														{
+															"key": "name",
+															"value": ""
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Buscar todos - VÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=1&size=1&name=aluno",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "size",
+															"value": "1"
+														},
+														{
+															"key": "name",
+															"value": "aluno"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Buscar todos - VÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios?name=-1",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "-1",
+															"disabled": true
+														},
+														{
+															"key": "size",
+															"value": "-1",
+															"disabled": true
+														},
+														{
+															"key": "name",
+															"value": "-1"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "inválidos [3]",
+									"item": [
+										{
+											"name": "Buscar todos - INVÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios?page= &size= ",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": " "
+														},
+														{
+															"key": "size",
+															"value": " "
+														},
+														{
+															"key": "name",
+															"value": " ",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Buscar todos - INVÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=-1&size=-1",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "-1"
+														},
+														{
+															"key": "size",
+															"value": "-1"
+														},
+														{
+															"key": "name",
+															"value": " ",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Buscar todos - INVÁLIDO",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=a&size=a",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"estagiario",
+														"listarEstagiarios"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "a"
+														},
+														{
+															"key": "size",
+															"value": "a"
+														},
+														{
+															"key": "name",
+															"value": " ",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Contar estagiários por trilha",
+							"item": [
+								{
+									"name": "Contar estagiários por trilha - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/agrupar-estagiario-por-trilha",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"agrupar-estagiario-por-trilha"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "Como usuário do sistema, eu quero poder preencher informações acerca do estagiário a fim de gerar relatórios sobre cada estagiário."
+				},
+				{
+					"name": "Relatorio",
+					"item": [
+						{
+							"name": "válidos [1]",
+							"item": [
+								{
+									"name": "Gerar relatório do estagiário em PDF - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/relatorio/:idEstagiario",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"relatorio",
+												":idEstagiario"
+											],
+											"variable": [
+												{
+													"key": "idEstagiario",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "inválidos [4]",
+							"item": [
+								{
+									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/relatorio/:idEstagiario",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"relatorio",
+												":idEstagiario"
+											],
+											"variable": [
+												{
+													"key": "idEstagiario",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/relatorio/:idEstagiario",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"relatorio",
+												":idEstagiario"
+											],
+											"variable": [
+												{
+													"key": "idEstagiario",
+													"value": " "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/relatorio/:idEstagiario",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"relatorio",
+												":idEstagiario"
+											],
+											"variable": [
+												{
+													"key": "idEstagiario",
+													"value": "-1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/relatorio/:idEstagiario",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"relatorio",
+												":idEstagiario"
+											],
+											"variable": [
+												{
+													"key": "idEstagiario",
+													"value": "a"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "Como usuário do sistema, eu quero poder exportar em PDF os relatórios gerados."
+				},
+				{
+					"name": "Trilha",
+					"item": [
+						{
+							"name": "válidos [4]",
+							"item": [
+								{
+									"name": "Obter trilha por nome - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "1",
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": "QA"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter trilha por nome - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "1",
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": " "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter trilha por nome - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome?size=1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "1"
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": "QA"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter trilha por nome - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": " ",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": " ",
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": " "
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "inválidos [4]",
+							"item": [
+								{
+									"name": "Obter trilha por nome - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome?page=1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "1",
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": "QA"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter trilha por nome - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "1",
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": "-1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter trilha por nome - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome?page= &size= ",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": " "
+												},
+												{
+													"key": "size",
+													"value": " "
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": "QA"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter trilha por nome - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/trilha/:nome?page= &size= ",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"trilha",
+												":nome"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": " "
+												},
+												{
+													"key": "size",
+													"value": " "
+												}
+											],
+											"variable": [
+												{
+													"key": "nome",
+													"value": " "
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "Como usuário do sistema, eu quero poder visualizar informações sobre cada trilha do programa VEM SER."
+				}
+			],
+			"description": "**Front-end**  \n[Deploy - Front-end](https://pdi-front.vercel.app/login)\n\n**Back-end**  \n[Documentação - API/Back-end](https://pdi-back-hml.onrender.com/swagger-ui/index.html#/)\n\n**QA**  \n[Documentação - Time de Qualidade](https://docs.google.com/document/d/1uwmhRKAB8eZPC94iriWBEiTsw3HQwanRt3S1T63F83s/edit?usp=sharing)\n\n**Guia - Status Code**  \n[Guia - HTTP Status Code - Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"✅ Fluxo de login automatizado\")",
+							"",
+							"const loginReq = {",
+							"    url: pm.environment.get(\"base_url_chronos\") + \"/usuario/login\",",
+							"    method: \"POST\",",
+							"    header: {",
+							"        \"Content-Type\": \"application/json\"",
+							"    },",
+							"    body: {",
+							"        mode: \"raw\",",
+							"        raw: JSON.stringify({",
+							"            \"username\": `${pm.environment.get(\"username\")}`,",
+							"            \"password\": `${pm.environment.get(\"password\")}`",
+							"        })",
+							"    }",
+							"}",
+							"",
+							"pm.sendRequest(loginReq, (err, res) => {",
+							"    // let response = res.text()",
+							"    // console.log(response)",
+							"    if(err) return console.log(\"🛑 Token inválido e/ou expirado: \" + err)",
+							"    pm.environment.set(\"token\", res.text())",
+							"})"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
