@@ -5,7 +5,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import model.responses.BaseResponse;
 import model.responses.ErrorResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TrilhaContractTest {
     private TrilhaClient trilhaClient = new TrilhaClient();

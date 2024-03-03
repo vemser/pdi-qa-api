@@ -1,8 +1,8 @@
 package com.pdi.tests.functional;
 
 import client.RelatorioClient;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RelatorioFunctionalTest {
     private final RelatorioClient relatorioClient = new RelatorioClient();

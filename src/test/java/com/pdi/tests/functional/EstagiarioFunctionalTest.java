@@ -3,9 +3,8 @@ package com.pdi.tests.functional;
 import client.EstagiarioClient;
 import model.responses.BaseResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Assert;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class EstagiarioFunctionalTest {
     private final EstagiarioClient estagiarioClient = new EstagiarioClient();
@@ -20,7 +19,7 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(baseResponse.content)
+                () -> Assertions.assertNotNull(baseResponse.content)
         );
     }
 
@@ -34,7 +33,7 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(baseResponse.content)
+                () -> Assertions.assertNotNull(baseResponse.content)
         );
     }
 
@@ -48,7 +47,7 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(baseResponse.content)
+                () -> Assertions.assertNotNull(baseResponse.content)
         );
     }
 }

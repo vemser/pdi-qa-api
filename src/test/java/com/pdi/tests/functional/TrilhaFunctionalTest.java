@@ -1,8 +1,8 @@
 package com.pdi.tests.functional;
 
 import client.TrilhaClient;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TrilhaFunctionalTest {
     private final TrilhaClient trilhaClient = new TrilhaClient();

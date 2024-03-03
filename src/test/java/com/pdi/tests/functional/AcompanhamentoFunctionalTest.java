@@ -3,9 +3,9 @@ package com.pdi.tests.functional;
 import client.AcompanhamentoClient;
 import model.responses.AcompanhamentoResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Assert;
-import org.junit.Test;
+
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AcompanhamentoFunctionalTest {
     private final AcompanhamentoClient acompanhamentoClient = new AcompanhamentoClient();
@@ -20,7 +20,7 @@ public class AcompanhamentoFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(acompanhamentoResponse.content)
+                () -> Assertions.assertNotNull(acompanhamentoResponse.content)
         );
     }
 }

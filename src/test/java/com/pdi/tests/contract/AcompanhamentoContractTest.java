@@ -5,7 +5,8 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import model.responses.AcompanhamentoResponse;
 import model.responses.ErrorResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 
 public class AcompanhamentoContractTest {
     private AcompanhamentoClient acompanhamentoClient = new AcompanhamentoClient();

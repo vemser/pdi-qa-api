@@ -6,7 +6,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import model.Login;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 @Epic("Login Ecos")
 public class LoginFunctionalTest {
