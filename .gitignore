@@ -1,3 +1,9 @@
+# Ignorar todos os arquivos em src/main/resources
+src/main/resources/*
+
+# Com exceção de example.properties
+!src/main/resources/example.properties
+
 ### Relatório - Postman - Newman ###
 postman/newman/*
 
@@ -9,11 +15,13 @@ postman/newman/*
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+target
 
 # AWS User-specific
 .idea/**/aws.xml

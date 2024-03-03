@@ -2,6 +2,9 @@ package model.enums;
 
 public enum PermissoesEnum {
         ADMIN,
+        COORDENADOR,
         GP,
-        INSTRUTOR
+        INSTRUTOR,
+        COLABORADOR,
+        ALUNO
 }

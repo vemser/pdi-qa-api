@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>projeto-aula-01</artifactId>
+    <artifactId>pdi-qa-api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -15,6 +15,7 @@
         <rest-assured-version>5.4.0</rest-assured-version>
         <json-schema-validator-version>5.4.0</json-schema-validator-version>
         <junit-version>4.13.2</junit-version>
+        <junit-jupiter-version>5.10.0</junit-jupiter-version>
         <datafaker-version>1.0.2</datafaker-version>
         <lombok-project-version>1.18.24</lombok-project-version>
         <allure.version>2.25.0</allure.version>
@@ -43,6 +44,11 @@
             <version>${junit-version}</version>
         </dependency>
         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter-version}</version>
+        </dependency>
+        <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>${json-schema-validator-version}</version>
@@ -64,31 +70,31 @@
     </dependencies>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.3</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>
-                        -Dfile.encoding=${project.build.sourceEncoding}
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                    </argLine>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
-                        </property>
-                    </properties>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.2.3</version>-->
+<!--                <configuration>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <argLine>-->
+<!--                        -Dfile.encoding=${project.build.sourceEncoding}-->
+<!--                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
+<!--                    </argLine>-->
+<!--                    <properties>-->
+<!--                        <property>-->
+<!--                            <name>listener</name>-->
+<!--                            <value>io.qameta.allure.junit4.AllureJunit4</value>-->
+<!--                        </property>-->
+<!--                    </properties>-->
+<!--                </configuration>-->
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>org.aspectj</groupId>-->
+<!--                        <artifactId>aspectjweaver</artifactId>-->
+<!--                        <version>${aspectj.version}</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
