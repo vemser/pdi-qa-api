@@ -1,6 +1,8 @@
 package com.pdi.tests.contract;
 
 import com.pdi.tests.client.RelatorioClient;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -9,11 +11,12 @@ import org.junit.jupiter.api.Test;
 public class RelatorioContractTest {
     private final RelatorioClient relatorioClient = new RelatorioClient();
 
-    // TODO: teste válido quebrado por não existir um usuário mockado preparado
     @Test
+    @Epic("Relatório")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id válido")
     public void testValidateAValidCaseOfGetRelatoryContract() {
-        relatorioClient.generateAPDFRelatory("1")
+        relatorioClient.generateAPDFRelatory("2")
                 .then()
                     .log().body()
                     .assertThat().statusCode(HttpStatus.SC_OK)
@@ -22,6 +25,8 @@ public class RelatorioContractTest {
     }
 
     @Test
+    @Epic("Relatório")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 01")
     public void testAInvalidCaseOfGetRelatoryWithInvalidIdContract() {
         relatorioClient.generateAPDFRelatory("-1")
@@ -33,6 +38,8 @@ public class RelatorioContractTest {
     }
 
     @Test
+    @Epic("Relatório")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 02")
     public void testAInvalidCaseOfGetRelatoryWithInvalidStringIdContract() {
         relatorioClient.generateAPDFRelatory("a")
@@ -43,6 +50,8 @@ public class RelatorioContractTest {
     }
 
     @Test
+    @Epic("Relatório")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 03")
     public void testAInvalidCaseOfGetRelatoryWithInvalidEmptyIdContract() {
         relatorioClient.generateAPDFRelatory("")

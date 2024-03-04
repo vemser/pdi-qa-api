@@ -8,6 +8,9 @@
     "status": {
       "type": "integer"
     },
+    "message": {
+      "type": "string"
+    },
     "error": {
       "type": "string"
     },
@@ -17,8 +20,6 @@
   },
   "required": [
     "timestamp",
-    "status",
-    "error",
-    "path"
+    "status"
   ]
 }

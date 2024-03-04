@@ -4,6 +4,8 @@ import com.pdi.tests.client.EstagiarioClient;
 import com.pdi.tests.model.enums.StatusEnum;
 import com.pdi.tests.model.responses.EstagiarioResponse;
 import com.pdi.tests.model.responses.EstagiarioTrilhaResponse;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -17,6 +19,8 @@ public class EstagiarioFunctionalTest {
     private final EstagiarioClient estagiarioClient = new EstagiarioClient();
 
     @Test
+    @Epic("Estagiário")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar apenas um estagiário com a paginação")
     public void testValidateAValidCaseOfListAllEstagiariosFunctional() {
         EstagiarioResponse estagiarioResponse = estagiarioClient.searchAllWithPagination("1", "1")
@@ -27,18 +31,20 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(estagiarioResponse.content),
-                () -> Assert.assertEquals(1, estagiarioResponse.content.size()),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).idEstagiario),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).nome),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).trilha),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).email),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).programa),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).status)
+                () -> Assertions.assertNotNull(estagiarioResponse.content),
+                () -> Assertions.assertEquals(1, estagiarioResponse.content.size()),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).idEstagiario),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).nome),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).trilha),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).email),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).programa),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).status)
         );
     }
 
     @Test
+    @Epic("Estagiário")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar uma página de estagiários")
     public void testSearchEstagiariosByPageFunctional() {
         EstagiarioResponse estagiarioResponse = estagiarioClient.searchAllWithPagination("1", "10")
@@ -49,18 +55,20 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(estagiarioResponse.content),
-                () -> Assert.assertFalse(estagiarioResponse.content.isEmpty()),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).idEstagiario),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).nome),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).trilha),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).email),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).programa),
-                () -> Assert.assertTrue(Arrays.asList(status).contains(estagiarioResponse.content.get(0).status))
+                () -> Assertions.assertNotNull(estagiarioResponse.content),
+                () -> Assertions.assertFalse(estagiarioResponse.content.isEmpty()),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).idEstagiario),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).nome),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).trilha),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).email),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).programa),
+                () -> Assertions.assertTrue(Arrays.asList(status).contains(estagiarioResponse.content.get(0).status))
         );
     }
 
     @Test
+    @Epic("Estagiário")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar todos os estagiários")
     public void testSearchAllEstagiariosFunctional() {
         EstagiarioResponse estagiarioResponse = estagiarioClient.searchAll()
@@ -71,19 +79,21 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertNotNull(estagiarioResponse.content),
-                () -> Assert.assertFalse(estagiarioResponse.content.isEmpty()),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).idEstagiario),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).nome),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).trilha),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).email),
-                () -> Assert.assertNotNull(estagiarioResponse.content.get(0).programa),
-                () -> Assert.assertTrue(Arrays.asList(status).contains(estagiarioResponse.content.get(0).status))
+                () -> Assertions.assertNotNull(estagiarioResponse.content),
+                () -> Assertions.assertFalse(estagiarioResponse.content.isEmpty()),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).idEstagiario),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).nome),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).trilha),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).email),
+                () -> Assertions.assertNotNull(estagiarioResponse.content.get(0).programa),
+                () -> Assertions.assertTrue(Arrays.asList(status).contains(estagiarioResponse.content.get(0).status))
 
         );
     }
 
     @Test
+    @Epic("Estagiário")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Contar estagiários por trilha")
     public void testCountEstagiarioPerTrilhaFunctional() {
         List<EstagiarioTrilhaResponse> estagiarioTrilhaResponseList = estagiarioClient.countEstagiariosByTrilha()
@@ -94,12 +104,11 @@ public class EstagiarioFunctionalTest {
                 ;
 
         Assertions.assertAll(
-                () -> Assert.assertFalse(estagiarioTrilhaResponseList.isEmpty()),
-                () -> Assert.assertNotNull(estagiarioTrilhaResponseList.get(0).idAgrupamento),
-                () -> Assert.assertNotNull(estagiarioTrilhaResponseList.get(0).programa),
-                () -> Assert.assertNotNull(estagiarioTrilhaResponseList.get(0).trilha),
-                () -> Assert.assertNotNull(estagiarioTrilhaResponseList.get(0).quantidade)
+                () -> Assertions.assertFalse(estagiarioTrilhaResponseList.isEmpty()),
+                () -> Assertions.assertNotNull(estagiarioTrilhaResponseList.get(0).idAgrupamento),
+                () -> Assertions.assertNotNull(estagiarioTrilhaResponseList.get(0).programa),
+                () -> Assertions.assertNotNull(estagiarioTrilhaResponseList.get(0).trilha),
+                () -> Assertions.assertNotNull(estagiarioTrilhaResponseList.get(0).quantidade)
         );
     }
-
 }

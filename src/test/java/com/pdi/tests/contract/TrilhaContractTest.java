@@ -1,6 +1,8 @@
 package com.pdi.tests.contract;
 
 import com.pdi.tests.client.TrilhaClient;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -10,6 +12,8 @@ public class TrilhaContractTest {
     private final TrilhaClient trilhaClient = new TrilhaClient();
 
     @Test
+    @Epic("Trilha")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de uma trilha com um nome válido")
     public void testValidateAValidCaseOfGetTrilhaContract() {
         trilhaClient.getTrilha("QA")
@@ -22,6 +26,8 @@ public class TrilhaContractTest {
     
     // TODO: test quebrado justamente porque o contrato não está sendo respeitado
     @Test
+    @Epic("Trilha")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de uma trilha com um nome inválido - variação 01")
     public void testValidateAnInvalidCaseOfGetTrilhaContract() {
         trilhaClient.getTrilha("-1")
@@ -33,6 +39,8 @@ public class TrilhaContractTest {
     }
 
     @Test
+    @Epic("Trilha")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de uma trilha com um nome inválido - variação 02")
     public void testValidateAnInvalidCaseOfGetTrilhaContractVariation03() {
         trilhaClient.getTrilha("")

@@ -3,6 +3,8 @@ package com.pdi.tests.functional;
 import com.pdi.tests.client.TrilhaClient;
 import com.pdi.tests.model.responses.ErrorResponse;
 import com.pdi.tests.model.responses.TrilhaResponse;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -12,6 +14,8 @@ public class TrilhaFunctionalTest {
     private final TrilhaClient trilhaClient = new TrilhaClient();
 
     @Test
+    @Epic("Trilha")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar uma trilha filtrada por nome")
     public void testValidateAValidCaseOfGetTrilhaFunctional() {
         TrilhaResponse trilhaResponse = trilhaClient.getTrilha("QA")
@@ -32,11 +36,13 @@ public class TrilhaFunctionalTest {
                 () -> Assertions.assertNotNull(trilhaResponse.content.get(0).status),
                 () -> Assertions.assertNotNull(trilhaResponse.content.get(0).ativo),
                 () -> Assertions.assertNotNull(trilhaResponse.content.get(0).idPrograma)
-                //() -> Assertions.assertNotNull(trilhaResponse.content.get(0).link)
+                //() -> Assertions.assertNotNull(trilhaResponse.content.get(0).link) // OBS.: link vem "nulo" por padrão
         );
     }
 
     @Test
+    @Epic("Trilha")
+    @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar uma trilha filtrada por nome inválido")
     public void testValidateAnInvalidCaseOfGetTrilhaFunctional() {
         ErrorResponse trilhaResponse = trilhaClient.getTrilha("-1")
