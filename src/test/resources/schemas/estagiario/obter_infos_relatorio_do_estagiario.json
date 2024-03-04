@@ -40,6 +40,42 @@
             },
             "feedback": {
               "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "id",
+            "nome",
+            "descricao",
+            "status",
+            "ativo",
+            "idTrilha",
+            "feedback"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "nome": {
+              "type": "string"
+            },
+            "descricao": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "ativo": {
+              "type": "boolean"
+            },
+            "idTrilha": {
+              "type": "null"
+            },
+            "feedback": {
+              "type": "array",
               "items": [
                 {
                   "type": "object",
@@ -96,6 +132,42 @@
                   ]
                 }
               ]
+            }
+          },
+          "required": [
+            "id",
+            "nome",
+            "descricao",
+            "status",
+            "ativo",
+            "idTrilha",
+            "feedback"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "nome": {
+              "type": "string"
+            },
+            "descricao": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "ativo": {
+              "type": "boolean"
+            },
+            "idTrilha": {
+              "type": "null"
+            },
+            "feedback": {
+              "type": "array",
+              "items": {}
             }
           },
           "required": [

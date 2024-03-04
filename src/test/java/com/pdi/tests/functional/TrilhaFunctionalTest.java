@@ -1,35 +1,56 @@
 package com.pdi.tests.functional;
 
-import client.TrilhaClient;
+import com.pdi.tests.client.TrilhaClient;
+import com.pdi.tests.model.responses.ErrorResponse;
+import com.pdi.tests.model.responses.TrilhaResponse;
+import org.apache.http.HttpStatus;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 
 public class TrilhaFunctionalTest {
     private final TrilhaClient trilhaClient = new TrilhaClient();
 
     @Test
+    @DisplayName("Retornar uma trilha filtrada por nome")
     public void testValidateAValidCaseOfGetTrilhaFunctional() {
-        trilhaClient.getTrilha("1")
+        TrilhaResponse trilhaResponse = trilhaClient.getTrilha("QA")
                 .then()
                     .log().body()
-                    .assertThat().statusCode(200)
+                    .assertThat().statusCode(HttpStatus.SC_OK)
+                    .extract()
+                    .as(TrilhaResponse.class)
                 ;
 
         Assertions.assertAll(
-                () -> Assertions.assertTrue(true)
+                () -> Assertions.assertFalse(trilhaResponse.content.isEmpty()),
+                () -> Assertions.assertEquals(1, trilhaResponse.content.size()),
+                () -> Assertions.assertNotNull(trilhaResponse.content.get(0).idTrilha),
+                () -> Assertions.assertNotNull(trilhaResponse.content.get(0).nome),
+                () -> Assertions.assertEquals("QA", trilhaResponse.content.get(0).nome),
+                () -> Assertions.assertNotNull(trilhaResponse.content.get(0).descricao),
+                () -> Assertions.assertNotNull(trilhaResponse.content.get(0).status),
+                () -> Assertions.assertNotNull(trilhaResponse.content.get(0).ativo),
+                () -> Assertions.assertNotNull(trilhaResponse.content.get(0).idPrograma)
+                //() -> Assertions.assertNotNull(trilhaResponse.content.get(0).link)
         );
     }
 
     @Test
+    @DisplayName("Retornar uma trilha filtrada por nome inválido")
     public void testValidateAnInvalidCaseOfGetTrilhaFunctional() {
-        trilhaClient.getTrilha("-1")
+        ErrorResponse trilhaResponse = trilhaClient.getTrilha("-1")
                 .then()
                     .log().body()
-                    .assertThat().statusCode(400)
+                    .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST)
+                    .extract()
+                    .as(ErrorResponse.class)
                 ;
 
         Assertions.assertAll(
-                () -> Assertions.assertTrue(true)
+                () -> Assertions.assertNotNull(trilhaResponse.timestamp),
+                () -> Assertions.assertEquals(400, trilhaResponse.status),
+                () -> Assertions.assertEquals("Trilha não encontrada", trilhaResponse.message)
         );
     }
 }

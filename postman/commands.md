@@ -1,5 +1,5 @@
 ---
-modified: 2024-03-02T15:56:47.570Z
+modified: 2024-03-03T15:31:45.208Z
 title: Como executar o relatório com o newman
 ---
 

@@ -1,44 +1,54 @@
 package com.pdi.tests.contract;
 
-import client.RelatorioClient;
+import com.pdi.tests.client.RelatorioClient;
 import io.restassured.module.jsv.JsonSchemaValidator;
-import model.responses.BaseResponse;
-import model.responses.ErrorResponse;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 public class RelatorioContractTest {
-    private RelatorioClient relatorioClient = new RelatorioClient();
+    private final RelatorioClient relatorioClient = new RelatorioClient();
 
     // TODO: teste válido quebrado por não existir um usuário mockado preparado
     @Test
+    @DisplayName("Validar o retorno de um relatório de um estagiário com um id válido")
     public void testValidateAValidCaseOfGetRelatoryContract() {
         relatorioClient.generateAPDFRelatory("1")
                 .then()
                     .log().body()
                     .assertThat().statusCode(HttpStatus.SC_OK)
                     .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/relatorio/gerar_relatorio_do_estagiario.json"))
-                    .extract().as(BaseResponse.class)
                 ;
     }
 
     @Test
+    @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 01")
     public void testAInvalidCaseOfGetRelatoryWithInvalidIdContract() {
         relatorioClient.generateAPDFRelatory("-1")
                 .then()
                     .log().body()
                     .assertThat().statusCode(HttpStatus.SC_INTERNAL_SERVER_ERROR)
                     .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/error_response.json"))
-                    .extract().as(ErrorResponse.class)
                 ;
     }
 
     @Test
+    @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 02")
     public void testAInvalidCaseOfGetRelatoryWithInvalidStringIdContract() {
         relatorioClient.generateAPDFRelatory("a")
                 .then()
                     .log().body()
                     .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST)
+                ;
+    }
+
+    @Test
+    @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 03")
+    public void testAInvalidCaseOfGetRelatoryWithInvalidEmptyIdContract() {
+        relatorioClient.generateAPDFRelatory("")
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_NOT_FOUND)
                 ;
     }
 }
