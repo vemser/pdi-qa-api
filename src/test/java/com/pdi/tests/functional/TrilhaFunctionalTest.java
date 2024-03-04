@@ -4,9 +4,9 @@ import com.pdi.tests.client.TrilhaClient;
 import com.pdi.tests.model.responses.ErrorResponse;
 import com.pdi.tests.model.responses.TrilhaResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class TrilhaFunctionalTest {
     private final TrilhaClient trilhaClient = new TrilhaClient();

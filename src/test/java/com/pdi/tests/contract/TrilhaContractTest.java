@@ -3,8 +3,8 @@ package com.pdi.tests.contract;
 import com.pdi.tests.client.TrilhaClient;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class TrilhaContractTest {
     private final TrilhaClient trilhaClient = new TrilhaClient();

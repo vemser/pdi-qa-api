@@ -3,10 +3,10 @@ package com.pdi.tests.functional;
 import com.pdi.tests.client.AcompanhamentoClient;
 import com.pdi.tests.model.responses.AcompanhamentoResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Assert;
-import org.junit.Test;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class AcompanhamentoFunctionalTest {
     private final AcompanhamentoClient acompanhamentoClient = new AcompanhamentoClient();

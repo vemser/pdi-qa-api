@@ -4,7 +4,8 @@ import com.pdi.tests.client.AcompanhamentoClient;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import com.pdi.tests.model.responses.ErrorResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 import org.junit.jupiter.api.DisplayName;
 
 public class AcompanhamentoContractTest {

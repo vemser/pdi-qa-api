@@ -5,13 +5,12 @@ import com.pdi.tests.model.enums.StatusEnum;
 import com.pdi.tests.model.responses.EstagiarioResponse;
 import com.pdi.tests.model.responses.EstagiarioTrilhaResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Assert;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 
 import java.util.Arrays;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
 public class EstagiarioFunctionalTest {
     private static final StatusEnum[] status = StatusEnum.values();

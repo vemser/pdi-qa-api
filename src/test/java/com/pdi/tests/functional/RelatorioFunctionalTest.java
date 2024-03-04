@@ -4,9 +4,9 @@ import com.pdi.tests.client.RelatorioClient;
 import com.pdi.tests.model.responses.ErrorResponse;
 import com.pdi.tests.model.responses.RelatorioResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class RelatorioFunctionalTest {
     private final RelatorioClient relatorioClient = new RelatorioClient();
