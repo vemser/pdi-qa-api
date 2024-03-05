@@ -1,10 +1,7 @@
 package com.pdi.tests.contract;
 
 import com.pdi.tests.client.RelatorioClient;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -16,8 +13,9 @@ public class RelatorioContractTest {
     // TODO: instável por ser uma funcionalidade dependente de um estagiário mock (id 2)
     @Test
     @Epic("Relatório")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US003 - Relatório")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id válido")
     public void testValidateAValidCaseOfGetRelatoryContract() {
         relatorioClient.generateAPDFRelatory("2")
@@ -30,8 +28,9 @@ public class RelatorioContractTest {
 
     @Test
     @Epic("Relatório")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US003 - Relatório")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 01")
     public void testAInvalidCaseOfGetRelatoryWithInvalidIdContract() {
         relatorioClient.generateAPDFRelatory("-1")
@@ -44,8 +43,9 @@ public class RelatorioContractTest {
 
     @Test
     @Epic("Relatório")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US003 - Relatório")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 02")
     public void testAInvalidCaseOfGetRelatoryWithInvalidStringIdContract() {
         relatorioClient.generateAPDFRelatory("a")
@@ -57,8 +57,9 @@ public class RelatorioContractTest {
 
     @Test
     @Epic("Relatório")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US003 - Relatório")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 03")
     public void testAInvalidCaseOfGetRelatoryWithInvalidEmptyIdContract() {
         relatorioClient.generateAPDFRelatory("")

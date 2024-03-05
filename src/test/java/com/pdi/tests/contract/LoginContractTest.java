@@ -14,9 +14,9 @@ public class LoginContractTest {
 
     @Test
     @Epic("Login")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
-    @Story("US002 - Login")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - ADMIN")
     public void testASimpleValidLoginLikeColaborador() {
         var colaborador = LoginDataFactory.dadosColaborador();
@@ -34,9 +34,9 @@ public class LoginContractTest {
 
     @Test
     @Epic("Login")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
-    @Story("US002 - Login")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o contrato de login com dados inválidos")
     public void testAInvalidLoginContract() {
         var loginInvalido = LoginDataFactory.dadosLoginInvalido();

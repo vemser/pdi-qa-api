@@ -1,10 +1,7 @@
 package com.pdi.tests.contract;
 
 import com.pdi.tests.client.TrilhaClient;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -15,8 +12,9 @@ public class TrilhaContractTest {
 
     @Test
     @Epic("Trilha")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de uma trilha com um nome válido")
     public void testValidateAValidCaseOfGetTrilhaContract() {
         trilhaClient.getTrilha("QA")
@@ -31,8 +29,9 @@ public class TrilhaContractTest {
     // TODO: test quebrado justamente porque o contrato não está sendo respeitado
     @Test
     @Epic("Trilha")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de uma trilha com um nome inválido - variação 01")
     public void testValidateAnInvalidCaseOfGetTrilhaContract() {
         trilhaClient.getTrilha("-1")
@@ -45,8 +44,8 @@ public class TrilhaContractTest {
 
     @Test
     @Epic("Trilha")
-    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar o retorno de uma trilha com um nome inválido - variação 02")
     public void testValidateAnInvalidCaseOfGetTrilhaContractVariation03() {
         trilhaClient.getTrilha("")

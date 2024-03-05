@@ -45,8 +45,8 @@ public class TrilhaFunctionalTest {
 
     @Test
     @Epic("Trilha")
-    @Severity(SeverityLevel.MINOR)
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.MINOR)
     @DisplayName("Retornar uma trilha filtrada por nome inválido")
     public void testValidateAnInvalidCaseOfGetTrilhaFunctional() {
         ErrorResponse trilhaResponse = trilhaClient.getTrilha("-1")

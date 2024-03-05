@@ -14,7 +14,7 @@ public class RelatorioFunctionalTest {
 
     @Test
     @Epic("Relatório")
-    @Story("Relatório do estagiário")
+    @Story("US003 - Relatório")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Gerar relatório do estagiário em PDF")
@@ -36,7 +36,7 @@ public class RelatorioFunctionalTest {
     // neste caso seria mais adequado um status code 404 = NOT FOUND
     @Test
     @Epic("Relatório")
-    @Story("Relatório do estagiário")
+    @Story("US003 - Relatório")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Gerar relatório do estagiário em PDF indevidamente")

@@ -1,10 +1,7 @@
 package com.pdi.tests.contract;
 
 import com.pdi.tests.client.EstagiarioClient;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -15,8 +12,9 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar contrato do retorno de todos os estagiários")
     public void testValidateAValidCaseOfListAllEstagiariosContract() {
         estagiarioClient.searchAll()
@@ -29,8 +27,9 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar contrato do retorno de todos os estagiários com paginação válida")
     public void testValidateAValidCaseOfListAllEstagiariosWithPaginationContract() {
         estagiarioClient.searchAllWithPagination("1", "1")
@@ -43,8 +42,9 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar contrato do retorno de todos os estagiários com paginação inválida")
     public void testAInvalidCaseOfListAllWithInvalidPaginationContract() {
         estagiarioClient.searchAllWithPagination("-1", "-1")
@@ -57,8 +57,9 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar contrato do retorno ao solicitar informações do relatório do estagiário com id válido")
     public void testValidateAValidCaseOfGetRelatoryInformationsAboutEstagiarioContract() {
         estagiarioClient.getRelatory("1")
@@ -71,8 +72,9 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar contrato do retorno ao solicitar informações do relatório do estagiário com id inválido")
     public void testAInvalidCaseOfGetRelatoryInformationsAboutEstagiarioContract() {
         estagiarioClient.getRelatory("-1")
@@ -85,8 +87,9 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar contrato ao contar todos os estagiários")
     public void testValidateAValidCaseOfCountAllEstagiariosContract() {
         estagiarioClient.countEstagiariosByTrilha()

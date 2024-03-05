@@ -16,7 +16,7 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - ADMIN")
@@ -40,7 +40,7 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - GESTOR")
@@ -62,7 +62,7 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - INSTRUTOR")
@@ -84,7 +84,7 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - GP")
@@ -106,7 +106,7 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - COLABORADOR")
@@ -128,9 +128,9 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Severity(SeverityLevel.CRITICAL)
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Validar login simples - ALUNO/ESTAGIÁRIO")
     public void testASimpleValidLoginLikeAluno() {
         var aluno = LoginDataFactory.dadosEstagiario();
@@ -150,7 +150,7 @@ public class LoginFunctionalTest {
 
     @Test
     @Epic("Login")
-    @Story("US002 - Login")
+    @Story("US001 - Autenticação")
     @Owner("Bruno Moraes Scarpari")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Realizar login com dados inválidos")
