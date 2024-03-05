@@ -3,8 +3,7 @@ package com.pdi.tests.functional;
 import com.pdi.tests.client.RelatorioClient;
 import com.pdi.tests.model.responses.ErrorResponse;
 import com.pdi.tests.model.responses.RelatorioResponse;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Owner;
+import io.qameta.allure.*;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +14,9 @@ public class RelatorioFunctionalTest {
 
     @Test
     @Epic("Relatório")
+    @Story("Relatório do estagiário")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Gerar relatório do estagiário em PDF")
     public void testGerarRelatorioDoEstagiarioEmPdf() {
         RelatorioResponse relatorioResponse = relatorioClient.generateAPDFRelatory("1")
@@ -35,7 +36,9 @@ public class RelatorioFunctionalTest {
     // neste caso seria mais adequado um status code 404 = NOT FOUND
     @Test
     @Epic("Relatório")
+    @Story("Relatório do estagiário")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Gerar relatório do estagiário em PDF indevidamente")
     public void testGerarRelatorioDoEstagiarioIndevidamente() {
         ErrorResponse relatorioResponse = relatorioClient.generateAPDFRelatory("-1")

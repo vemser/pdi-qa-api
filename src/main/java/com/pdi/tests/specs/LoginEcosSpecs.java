@@ -5,9 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class  LoginEcosSpecs {
-    public LoginEcosSpecs(){
+    public LoginEcosSpecs() {}
 
-    }
     public static RequestSpecification loginEcosReqSpecs(){
         return new RequestSpecBuilder()
             .addRequestSpecification(InicialEcosSpecs.setup())

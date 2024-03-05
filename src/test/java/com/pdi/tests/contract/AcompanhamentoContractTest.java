@@ -3,6 +3,8 @@ package com.pdi.tests.contract;
 import com.pdi.tests.client.AcompanhamentoClient;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import com.pdi.tests.model.responses.ErrorResponse;
 import org.apache.http.HttpStatus;
@@ -15,6 +17,7 @@ public class AcompanhamentoContractTest {
 
     @Test
     @Epic("Acompanhamento")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os acompanhamentos")
     public void testValidateAValidCaseOfListAllAgendamentosContract() {
@@ -28,6 +31,7 @@ public class AcompanhamentoContractTest {
 
     @Test
     @Epic("Acompanhamento")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os acompanhamentos com paginação inválida - variação 01")
     public void testAInvalidCaseOfListAllWithInvalidPaginationContract() {
@@ -42,6 +46,7 @@ public class AcompanhamentoContractTest {
     // TODO: futuramente o backend deve retornar um erro 400, mas atualmente está retornando body vazio
     @Test
     @Epic("Acompanhamento")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os acompanhamentos com paginação invalida - variação 02")
     public void testAInvalidCaseOfListAllWithInvalidPaginationWithTextContract() {
@@ -54,6 +59,7 @@ public class AcompanhamentoContractTest {
 
     @Test
     @Epic("Acompanhamento")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os acompanhamentos com paginação vazia")
     public void testAInvalidCaseOfListAllWithEmptyPaginationContract() {

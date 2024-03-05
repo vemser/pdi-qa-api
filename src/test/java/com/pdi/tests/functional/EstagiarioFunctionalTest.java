@@ -6,6 +6,8 @@ import com.pdi.tests.model.responses.EstagiarioResponse;
 import com.pdi.tests.model.responses.EstagiarioTrilhaResponse;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -20,6 +22,7 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.NORMAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar apenas um estagiário com a paginação")
     public void testValidateAValidCaseOfListAllEstagiariosFunctional() {
@@ -44,6 +47,7 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.NORMAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar uma página de estagiários")
     public void testSearchEstagiariosByPageFunctional() {
@@ -68,6 +72,7 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.NORMAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar todos os estagiários")
     public void testSearchAllEstagiariosFunctional() {
@@ -93,6 +98,7 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.MINOR)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Contar estagiários por trilha")
     public void testCountEstagiarioPerTrilhaFunctional() {

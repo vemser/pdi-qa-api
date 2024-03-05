@@ -4,6 +4,8 @@ import com.pdi.tests.client.AcompanhamentoClient;
 import com.pdi.tests.model.responses.AcompanhamentoResponse;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.http.HttpStatus;
 
 import org.junit.jupiter.api.Assertions;
@@ -15,6 +17,7 @@ public class AcompanhamentoFunctionalTest {
 
     @Test
     @Epic("Acompanhamento")
+    @Severity(SeverityLevel.BLOCKER)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de todos os acompanhamentos")
     public void testValidateGetAllAcompanhamentosFunctional() {

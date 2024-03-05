@@ -8,9 +8,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Feedback {
-    public Integer idFeedbackModulo;
-    public Integer idEstagiario;
-    public Integer idInstrutor;
-    public Integer idModulo;
+    public Integer id;
+//    public Integer idFeedbackModulo;
+//    public Integer idEstagiario;
+//    public Integer idInstrutor;
+//    public Integer idModulo;
     public String feedback;
 }

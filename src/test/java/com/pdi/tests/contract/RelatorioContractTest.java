@@ -3,6 +3,8 @@ package com.pdi.tests.contract;
 import com.pdi.tests.client.RelatorioClient;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -11,8 +13,10 @@ import org.junit.jupiter.api.Test;
 public class RelatorioContractTest {
     private final RelatorioClient relatorioClient = new RelatorioClient();
 
+    // TODO: instável por ser uma funcionalidade dependente de um estagiário mock (id 2)
     @Test
     @Epic("Relatório")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id válido")
     public void testValidateAValidCaseOfGetRelatoryContract() {
@@ -26,6 +30,7 @@ public class RelatorioContractTest {
 
     @Test
     @Epic("Relatório")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 01")
     public void testAInvalidCaseOfGetRelatoryWithInvalidIdContract() {
@@ -39,6 +44,7 @@ public class RelatorioContractTest {
 
     @Test
     @Epic("Relatório")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 02")
     public void testAInvalidCaseOfGetRelatoryWithInvalidStringIdContract() {
@@ -51,6 +57,7 @@ public class RelatorioContractTest {
 
     @Test
     @Epic("Relatório")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar o retorno de um relatório de um estagiário com um id inválido - variação 03")
     public void testAInvalidCaseOfGetRelatoryWithInvalidEmptyIdContract() {

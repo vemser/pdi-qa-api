@@ -5,6 +5,8 @@ import com.pdi.tests.model.responses.ErrorResponse;
 import com.pdi.tests.model.responses.TrilhaResponse;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -16,6 +18,7 @@ public class TrilhaFunctionalTest {
     @Test
     @Epic("Trilha")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.MINOR)
     @DisplayName("Retornar uma trilha filtrada por nome")
     public void testValidateAValidCaseOfGetTrilhaFunctional() {
         TrilhaResponse trilhaResponse = trilhaClient.getTrilha("QA")
@@ -42,6 +45,7 @@ public class TrilhaFunctionalTest {
 
     @Test
     @Epic("Trilha")
+    @Severity(SeverityLevel.MINOR)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Retornar uma trilha filtrada por nome inválido")
     public void testValidateAnInvalidCaseOfGetTrilhaFunctional() {

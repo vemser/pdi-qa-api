@@ -3,6 +3,8 @@ package com.pdi.tests.contract;
 import com.pdi.tests.client.EstagiarioClient;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,7 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os estagiários")
     public void testValidateAValidCaseOfListAllEstagiariosContract() {
@@ -26,6 +29,7 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os estagiários com paginação válida")
     public void testValidateAValidCaseOfListAllEstagiariosWithPaginationContract() {
@@ -39,6 +43,7 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno de todos os estagiários com paginação inválida")
     public void testAInvalidCaseOfListAllWithInvalidPaginationContract() {
@@ -52,6 +57,7 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno ao solicitar informações do relatório do estagiário com id válido")
     public void testValidateAValidCaseOfGetRelatoryInformationsAboutEstagiarioContract() {
@@ -65,6 +71,7 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato do retorno ao solicitar informações do relatório do estagiário com id inválido")
     public void testAInvalidCaseOfGetRelatoryInformationsAboutEstagiarioContract() {
@@ -78,6 +85,7 @@ public class EstagiarioContractTest {
 
     @Test
     @Epic("Estagiário")
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Bruno Moraes Scarpari")
     @DisplayName("Validar contrato ao contar todos os estagiários")
     public void testValidateAValidCaseOfCountAllEstagiariosContract() {
