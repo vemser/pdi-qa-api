@@ -1,0 +1,340 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "nomeEstagiario": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "nomeTrilha": {
+      "type": "string"
+    },
+    "nomePrograma": {
+      "type": "string"
+    },
+    "modulos": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "nome": {
+              "type": "string"
+            },
+            "descricao": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "ativo": {
+              "type": "boolean"
+            },
+            "idTrilha": {
+              "type": "null"
+            },
+            "feedback": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "idFeedbackModulo": {
+                      "type": "integer"
+                    },
+                    "idEstagiario": {
+                      "type": "integer"
+                    },
+                    "idInstrutor": {
+                      "type": "integer"
+                    },
+                    "idModulo": {
+                      "type": "integer"
+                    },
+                    "feedback": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "idFeedbackModulo",
+                    "idEstagiario",
+                    "idInstrutor",
+                    "idModulo",
+                    "feedback"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "idFeedbackModulo": {
+                      "type": "integer"
+                    },
+                    "idEstagiario": {
+                      "type": "integer"
+                    },
+                    "idInstrutor": {
+                      "type": "integer"
+                    },
+                    "idModulo": {
+                      "type": "integer"
+                    },
+                    "feedback": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "idFeedbackModulo",
+                    "idEstagiario",
+                    "idInstrutor",
+                    "idModulo",
+                    "feedback"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "nome",
+            "descricao",
+            "status",
+            "ativo",
+            "idTrilha",
+            "feedback"
+          ]
+        }
+      ]
+    },
+    "feedbacks": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "idFeedback": {
+              "type": "integer"
+            },
+            "nota": {
+              "type": "integer"
+            },
+            "descricao": {
+              "type": "string"
+            },
+            "loginResponsavel": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "cargoResponsavel": {
+              "type": "string"
+            },
+            "ativo": {
+              "type": "boolean"
+            },
+            "dataCriacao": {
+              "type": "string"
+            },
+            "idEstagiario": {
+              "type": "integer"
+            },
+            "idAvaliacao": {
+              "type": "null"
+            },
+            "colaboracao": {
+              "type": "null"
+            },
+            "proatividade": {
+              "type": "null"
+            },
+            "trabalhoEmEquipe": {
+              "type": "null"
+            },
+            "resiliencia": {
+              "type": "null"
+            },
+            "comprometimento": {
+              "type": "null"
+            },
+            "gestaoTempo": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "idFeedback",
+            "nota",
+            "descricao",
+            "loginResponsavel",
+            "status",
+            "cargoResponsavel",
+            "ativo",
+            "dataCriacao",
+            "idEstagiario",
+            "idAvaliacao",
+            "colaboracao",
+            "proatividade",
+            "trabalhoEmEquipe",
+            "resiliencia",
+            "comprometimento",
+            "gestaoTempo"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "idFeedback": {
+              "type": "integer"
+            },
+            "nota": {
+              "type": "integer"
+            },
+            "descricao": {
+              "type": "string"
+            },
+            "loginResponsavel": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "cargoResponsavel": {
+              "type": "string"
+            },
+            "ativo": {
+              "type": "boolean"
+            },
+            "dataCriacao": {
+              "type": "string"
+            },
+            "idEstagiario": {
+              "type": "integer"
+            },
+            "idAvaliacao": {
+              "type": "null"
+            },
+            "colaboracao": {
+              "type": "null"
+            },
+            "proatividade": {
+              "type": "null"
+            },
+            "trabalhoEmEquipe": {
+              "type": "null"
+            },
+            "resiliencia": {
+              "type": "null"
+            },
+            "comprometimento": {
+              "type": "null"
+            },
+            "gestaoTempo": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "idFeedback",
+            "nota",
+            "descricao",
+            "loginResponsavel",
+            "status",
+            "cargoResponsavel",
+            "ativo",
+            "dataCriacao",
+            "idEstagiario",
+            "idAvaliacao",
+            "colaboracao",
+            "proatividade",
+            "trabalhoEmEquipe",
+            "resiliencia",
+            "comprometimento",
+            "gestaoTempo"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "idFeedback": {
+              "type": "integer"
+            },
+            "nota": {
+              "type": "integer"
+            },
+            "descricao": {
+              "type": "string"
+            },
+            "loginResponsavel": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "cargoResponsavel": {
+              "type": "string"
+            },
+            "ativo": {
+              "type": "boolean"
+            },
+            "dataCriacao": {
+              "type": "string"
+            },
+            "idEstagiario": {
+              "type": "integer"
+            },
+            "idAvaliacao": {
+              "type": "null"
+            },
+            "colaboracao": {
+              "type": "null"
+            },
+            "proatividade": {
+              "type": "null"
+            },
+            "trabalhoEmEquipe": {
+              "type": "null"
+            },
+            "resiliencia": {
+              "type": "null"
+            },
+            "comprometimento": {
+              "type": "null"
+            },
+            "gestaoTempo": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "idFeedback",
+            "nota",
+            "descricao",
+            "loginResponsavel",
+            "status",
+            "cargoResponsavel",
+            "ativo",
+            "dataCriacao",
+            "idEstagiario",
+            "idAvaliacao",
+            "colaboracao",
+            "proatividade",
+            "trabalhoEmEquipe",
+            "resiliencia",
+            "comprometimento",
+            "gestaoTempo"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "nomeEstagiario",
+    "linkedin",
+    "nomeTrilha",
+    "nomePrograma",
+    "modulos",
+    "feedbacks"
+  ]
+}
