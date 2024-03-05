@@ -1,8 +1,0 @@
-com\pdi\tests\functional\AcompanhamentoFunctionalTest.class
-com\pdi\tests\contract\AcompanhamentoContractTest.class
-com\pdi\tests\functional\TrilhaFunctionalTest.class
-com\pdi\tests\contract\TrilhaContractTest.class
-com\pdi\tests\functional\RelatorioFunctionalTest.class
-com\pdi\tests\functional\EstagiarioFunctionalTest.class
-com\pdi\tests\contract\EstagiarioContractTest.class
-com\pdi\tests\contract\RelatorioContractTest.class
