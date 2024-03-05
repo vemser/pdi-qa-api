@@ -1,12 +1,15 @@
 package com.pdi.tests.data.factory;
 
+import com.github.javafaker.Faker;
 import com.pdi.tests.model.Login;
 import com.pdi.tests.utils.Manipulation;
 
+import java.util.Locale;
 import java.util.Properties;
 
 public class LoginDataFactory {
     private static final Properties props = Manipulation.getProp();
+    private static final Faker faker = new Faker(new Locale("pt-BR"));
 
     public LoginDataFactory() {}
 
@@ -32,5 +35,9 @@ public class LoginDataFactory {
 
     public static Login dadosEstagiario() {
         return new Login(props.getProperty("USERNAME_ALUNO"), props.getProperty("PASSWORD_ALUNO"));
+    }
+
+    public static Login dadosLoginInvalido() {
+        return new Login(faker.name().username(), faker.internet().password());
     }
 }

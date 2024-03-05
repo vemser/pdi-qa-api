@@ -1,0 +1,94 @@
+package com.pdi.tests.parameterized;
+
+import com.pdi.tests.client.FeedbackClient;
+import com.pdi.tests.model.Feedback;
+import com.pdi.tests.model.responses.FeedbackResponse;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.apache.http.HttpStatus;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+// TODO: finalizar implementação (endpoint instável)
+// Lógica, mapeamento e endpoints pronto. Apenas finalizar futuramente em review com time de backend.
+// DICA: só renomear a extensão do arquivo de ".todo" para ".java"
+public class FeedbackParameterizedTest {
+    private final FeedbackClient feedbackClient = new FeedbackClient();
+
+    @ParameterizedTest
+    @Epic("Feedback")
+    @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Criar feedback ao módulo (parametrizado)")
+    @MethodSource("com.pdi.tests.data.provider.FeedbackDataProvider#feedbackValidoDataProvider")
+    public void testAddNewFeedbacksWithValidDataParametrized(Feedback feedback) {
+        var feedbackId = String.valueOf(feedback.getId());
+
+        feedbackClient.addFeedback(feedback)
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_OK)
+                    .extract().as(FeedbackResponse.class)
+                ;
+
+        feedbackClient.deleteFeedback(feedbackId)
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_OK)
+                    .extract().as(FeedbackResponse.class)
+                ;
+    }
+
+    @ParameterizedTest
+    @Epic("Feedback")
+    @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Adicionar feedback ao módulo (parametrizado)")
+    @MethodSource("com.pdi.tests.data.provider.FeedbackDataProvider#feedbackInvalidoDataProvider")
+    public void testAddNewFeedbacksWithInvalidDataParametrized(Feedback feedback) {
+        var feedbackId = String.valueOf(feedback.getId());
+
+        feedbackClient.addFeedback(feedback)
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST)
+                    .extract().as(FeedbackResponse.class)
+                ;
+
+        feedbackClient.deleteFeedback(feedbackId)
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_OK)
+                    .extract().as(FeedbackResponse.class)
+                ;
+    }
+
+    @ParameterizedTest
+    @Epic("Feedback")
+    @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Deletar um feedback ao módulo (parametrizado)")
+    @MethodSource("com.pdi.tests.data.provider.FeedbackDataProvider#feedbackLimiteDataProvider")
+    public void testAddNewFeedbacksWithValidAndLimitDataParametrized(Feedback feedback) {
+        var feedbackId = String.valueOf(feedback.getId());
+
+        feedbackClient.addFeedback(feedback)
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST)
+                    .extract().as(FeedbackResponse.class)
+                ;
+
+        feedbackClient.deleteFeedback(feedbackId)
+                .then()
+                    .log().body()
+                    .assertThat().statusCode(HttpStatus.SC_OK)
+                    .extract().as(FeedbackResponse.class)
+                ;
+    }
+}

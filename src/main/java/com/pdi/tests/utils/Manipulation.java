@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Manipulation {
-    private Manipulation() {}
+    public Manipulation() {}
 
     public static Properties getProp() {
         Properties props = new Properties();

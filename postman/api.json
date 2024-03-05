@@ -12,594 +12,564 @@
 			"name": "vemser/pdi",
 			"item": [
 				{
-					"name": "Acompanhamento",
+					"name": "Acompanhamento [6]",
 					"item": [
 						{
-							"name": "válidos [3]",
-							"item": [
-								{
-									"name": "Listar todos - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{token}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"acompanhamento",
-												"listarAcompanhamentos"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "size",
-													"value": "1",
-													"disabled": true
-												}
-											]
+							"name": "Listar todos - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=-1&size=-1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"acompanhamento",
+										"listarAcompanhamentos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "-1"
+										},
+										{
+											"key": "size",
+											"value": "-1"
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Listar todos - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{token}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=&size=",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"acompanhamento",
-												"listarAcompanhamentos"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": ""
-												},
-												{
-													"key": "size",
-													"value": ""
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Listar todos - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{token}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=1&size=1",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"acompanhamento",
-												"listarAcompanhamentos"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1"
-												},
-												{
-													"key": "size",
-													"value": "1"
-												}
-											]
-										}
-									},
-									"response": []
+									]
 								}
-							]
+							},
+							"response": []
 						},
 						{
-							"name": "inválidos [3]",
-							"item": [
-								{
-									"name": "Listar todos - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{token}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=-1&size=-1",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"acompanhamento",
-												"listarAcompanhamentos"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "-1"
-												},
-												{
-													"key": "size",
-													"value": "-1"
-												}
-											]
+							"name": "Listar todos - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page= &size= ",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"acompanhamento",
+										"listarAcompanhamentos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": " "
+										},
+										{
+											"key": "size",
+											"value": " "
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Listar todos - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{token}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page= &size= ",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"acompanhamento",
-												"listarAcompanhamentos"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": " "
-												},
-												{
-													"key": "size",
-													"value": " "
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Listar todos - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{token}}",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=a&size=a",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"acompanhamento",
-												"listarAcompanhamentos"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "a"
-												},
-												{
-													"key": "size",
-													"value": "a"
-												}
-											]
-										}
-									},
-									"response": []
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "Listar todos - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=a&size=a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"acompanhamento",
+										"listarAcompanhamentos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "a"
+										},
+										{
+											"key": "size",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar todos - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"acompanhamento",
+										"listarAcompanhamentos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar todos - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=&size=",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"acompanhamento",
+										"listarAcompanhamentos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": ""
+										},
+										{
+											"key": "size",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar todos - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/acompanhamento/listarAcompanhamentos?page=1&size=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"acompanhamento",
+										"listarAcompanhamentos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"description": "Como usuário do sistema, tendo cargo de GP, quero ter acesso a funcionalidade de visualizar o histórico de todos os agendamentos já realizados com participantes do programa VEM SER."
 				},
 				{
-					"name": "Estagiário",
+					"name": "Estagiário [12]",
 					"item": [
 						{
-							"name": "Obter informações do estagiário",
+							"name": "Obter informações do estagiário [4]",
 							"item": [
 								{
-									"name": "válidos [1]",
-									"item": [
-										{
-											"name": "Obter relatório - VÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"relatorio-cliente",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id",
-															"value": "3"
-														}
-													]
+									"name": "Obter relatório - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"relatorio-cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
 												}
-											},
-											"response": []
+											]
 										}
-									]
+									},
+									"response": []
 								},
 								{
-									"name": "inválidos [3]",
-									"item": [
-										{
-											"name": "Obter relatório - INVÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"relatorio-cliente",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id",
-															"value": ""
-														}
-													]
+									"name": "Obter relatório - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"relatorio-cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-1"
 												}
-											},
-											"response": []
-										},
-										{
-											"name": "Obter relatório - INVÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"relatorio-cliente",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id",
-															"value": "-1"
-														}
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "Obter relatório - INVÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"relatorio-cliente",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id",
-															"value": "1"
-														}
-													]
-												}
-											},
-											"response": []
+											]
 										}
-									]
+									},
+									"response": []
+								},
+								{
+									"name": "Obter relatório - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"relatorio-cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": " "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Obter relatório - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/relatorio-cliente/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"relatorio-cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
 						{
-							"name": "Buscar todos estagiários",
+							"name": "Buscar todos estagiários [7]",
 							"item": [
 								{
-									"name": "válidos [4]",
-									"item": [
-										{
-											"name": "Buscar todos - VÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": "",
-															"disabled": true
-														},
-														{
-															"key": "size",
-															"value": "",
-															"disabled": true
-														},
-														{
-															"key": "name",
-															"value": "",
-															"disabled": true
-														}
-													]
+									"name": "Buscar todos - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios?page= &size= ",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": " "
+												},
+												{
+													"key": "size",
+													"value": " "
+												},
+												{
+													"key": "name",
+													"value": " ",
+													"disabled": true
 												}
-											},
-											"response": []
-										},
-										{
-											"name": "Buscar todos - VÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=&size=&name=",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": ""
-														},
-														{
-															"key": "size",
-															"value": ""
-														},
-														{
-															"key": "name",
-															"value": ""
-														}
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "Buscar todos - VÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=1&size=1&name=aluno",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": "1"
-														},
-														{
-															"key": "size",
-															"value": "1"
-														},
-														{
-															"key": "name",
-															"value": "aluno"
-														}
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "Buscar todos - VÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios?name=-1",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": "-1",
-															"disabled": true
-														},
-														{
-															"key": "size",
-															"value": "-1",
-															"disabled": true
-														},
-														{
-															"key": "name",
-															"value": "-1"
-														}
-													]
-												}
-											},
-											"response": []
+											]
 										}
-									]
+									},
+									"response": []
 								},
 								{
-									"name": "inválidos [3]",
-									"item": [
-										{
-											"name": "Buscar todos - INVÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios?page= &size= ",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": " "
-														},
-														{
-															"key": "size",
-															"value": " "
-														},
-														{
-															"key": "name",
-															"value": " ",
-															"disabled": true
-														}
-													]
+									"name": "Buscar todos - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios?page=-1&size=-1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "-1"
+												},
+												{
+													"key": "size",
+													"value": "-1"
+												},
+												{
+													"key": "name",
+													"value": " ",
+													"disabled": true
 												}
-											},
-											"response": []
-										},
-										{
-											"name": "Buscar todos - INVÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=-1&size=-1",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": "-1"
-														},
-														{
-															"key": "size",
-															"value": "-1"
-														},
-														{
-															"key": "name",
-															"value": " ",
-															"disabled": true
-														}
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "Buscar todos - INVÁLIDO",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/estagiario/listarEstagiarios?page=a&size=a",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"estagiario",
-														"listarEstagiarios"
-													],
-													"query": [
-														{
-															"key": "page",
-															"value": "a"
-														},
-														{
-															"key": "size",
-															"value": "a"
-														},
-														{
-															"key": "name",
-															"value": " ",
-															"disabled": true
-														}
-													]
-												}
-											},
-											"response": []
+											]
 										}
-									]
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar todos - INVÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios?page=a&size=a",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "a"
+												},
+												{
+													"key": "size",
+													"value": "a"
+												},
+												{
+													"key": "name",
+													"value": " ",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios?page=&size=&name=",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": ""
+												},
+												{
+													"key": "size",
+													"value": ""
+												},
+												{
+													"key": "name",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios?page=1&size=1&name=aluno",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "1"
+												},
+												{
+													"key": "name",
+													"value": "aluno"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar todos - VÁLIDO",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/estagiario/listarEstagiarios?name=-1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"estagiario",
+												"listarEstagiarios"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "-1",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "-1",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "-1"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
 						{
-							"name": "Contar estagiários por trilha",
+							"name": "Contar estagiários por trilha [1]",
 							"item": [
 								{
 									"name": "Contar estagiários por trilha - VÁLIDO",
@@ -625,435 +595,696 @@
 					"description": "Como usuário do sistema, eu quero poder preencher informações acerca do estagiário a fim de gerar relatórios sobre cada estagiário."
 				},
 				{
-					"name": "Relatorio",
+					"name": "Feedback [9]",
 					"item": [
 						{
-							"name": "válidos [1]",
-							"item": [
-								{
-									"name": "Gerar relatório do estagiário em PDF - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/relatorio/:idEstagiario",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"relatorio",
-												":idEstagiario"
-											],
-											"variable": [
-												{
-													"key": "idEstagiario",
-													"value": "3"
-												}
-											]
+							"name": "Deleta um feedback de módulo - VÁLIDO",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
 										}
-									},
-									"response": []
+									]
 								}
-							]
+							},
+							"response": []
 						},
 						{
-							"name": "inválidos [4]",
-							"item": [
-								{
-									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/relatorio/:idEstagiario",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"relatorio",
-												":idEstagiario"
-											],
-											"variable": [
-												{
-													"key": "idEstagiario",
-													"value": ""
-												}
-											]
+							"name": "Adiciona um feedback de módulo - VÁLIDO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"feedback\": \"Exemplo de teste de feedback (QA) - 00:17 - 04/03/24\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
 										}
-									},
-									"response": []
+									}
 								},
-								{
-									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/relatorio/:idEstagiario",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"relatorio",
-												":idEstagiario"
-											],
-											"variable": [
-												{
-													"key": "idEstagiario",
-													"value": " "
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/relatorio/:idEstagiario",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"relatorio",
-												":idEstagiario"
-											],
-											"variable": [
-												{
-													"key": "idEstagiario",
-													"value": "-1"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/relatorio/:idEstagiario",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"relatorio",
-												":idEstagiario"
-											],
-											"variable": [
-												{
-													"key": "idEstagiario",
-													"value": "a"
-												}
-											]
-										}
-									},
-									"response": []
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo"
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza um feedback de módulo  - VÁLIDO",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"feedback\": \"Exemplo de teste de feedback (QA) - 00:17 - 04/03/24 (EDITADO)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta um feedback de módulo - INVÁLIDO",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta um feedback de módulo - INVÁLIDO",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Adiciona um feedback para um módulo - INVÁLIDO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"a\",\r\n    \"feedback\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Adiciona um feedback para um módulo - INVÁLIDO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": -1,\r\n    \"feedback\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza um feedback para um módulo - INVÁLIDO",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"-1\",\r\n    \"feedback\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza um feedback para um módulo - INVÁLIDO",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"-1\",\r\n    \"feedback\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/pdi/v1/feedback-modulo/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"pdi",
+										"v1",
+										"feedback-modulo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Relatorio [5]",
+					"item": [
+						{
+							"name": "Gerar relatório do estagiário em PDF - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/relatorio/:idEstagiario",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"relatorio",
+										":idEstagiario"
+									],
+									"variable": [
+										{
+											"key": "idEstagiario",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/relatorio/:idEstagiario",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"relatorio",
+										":idEstagiario"
+									],
+									"variable": [
+										{
+											"key": "idEstagiario",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/relatorio/:idEstagiario",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"relatorio",
+										":idEstagiario"
+									],
+									"variable": [
+										{
+											"key": "idEstagiario",
+											"value": " "
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/relatorio/:idEstagiario",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"relatorio",
+										":idEstagiario"
+									],
+									"variable": [
+										{
+											"key": "idEstagiario",
+											"value": "-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gerar relatório do estagiário em PDF - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/relatorio/:idEstagiario",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"relatorio",
+										":idEstagiario"
+									],
+									"variable": [
+										{
+											"key": "idEstagiario",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"description": "Como usuário do sistema, eu quero poder exportar em PDF os relatórios gerados."
 				},
 				{
-					"name": "Trilha",
+					"name": "Trilha [8]",
 					"item": [
 						{
-							"name": "válidos [4]",
-							"item": [
-								{
-									"name": "Obter trilha por nome - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "size",
-													"value": "1",
-													"disabled": true
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": "QA"
-												}
-											]
+							"name": "Obter trilha por nome - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "1",
+											"disabled": true
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Obter trilha por nome - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "size",
-													"value": "1",
-													"disabled": true
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": " "
-												}
-											]
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": "QA"
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Obter trilha por nome - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome?size=1",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "size",
-													"value": "1"
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": "QA"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Obter trilha por nome - VÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": " ",
-													"disabled": true
-												},
-												{
-													"key": "size",
-													"value": " ",
-													"disabled": true
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": " "
-												}
-											]
-										}
-									},
-									"response": []
+									]
 								}
-							]
+							},
+							"response": []
 						},
 						{
-							"name": "inválidos [4]",
-							"item": [
-								{
-									"name": "Obter trilha por nome - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome?page=1",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1"
-												},
-												{
-													"key": "size",
-													"value": "1",
-													"disabled": true
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": "QA"
-												}
-											]
+							"name": "Obter trilha por nome - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "1",
+											"disabled": true
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Obter trilha por nome - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": "1",
-													"disabled": true
-												},
-												{
-													"key": "size",
-													"value": "1",
-													"disabled": true
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": "-1"
-												}
-											]
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": " "
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "Obter trilha por nome - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome?page= &size= ",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": " "
-												},
-												{
-													"key": "size",
-													"value": " "
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": "QA"
-												}
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Obter trilha por nome - INVÁLIDO",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/trilha/:nome?page= &size= ",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"trilha",
-												":nome"
-											],
-											"query": [
-												{
-													"key": "page",
-													"value": " "
-												},
-												{
-													"key": "size",
-													"value": " "
-												}
-											],
-											"variable": [
-												{
-													"key": "nome",
-													"value": " "
-												}
-											]
-										}
-									},
-									"response": []
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "Obter trilha por nome - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome?size=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": "QA"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obter trilha por nome - VÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": " ",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": " ",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": " "
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obter trilha por nome - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "1",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": "QA"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obter trilha por nome - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "1",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": "-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obter trilha por nome - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome?page= &size= ",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": " "
+										},
+										{
+											"key": "size",
+											"value": " "
+										}
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": "QA"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obter trilha por nome - INVÁLIDO",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/trilha/:nome?page= &size= ",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"trilha",
+										":nome"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": " "
+										},
+										{
+											"key": "size",
+											"value": " "
+										}
+									],
+									"variable": [
+										{
+											"key": "nome",
+											"value": " "
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"description": "Como usuário do sistema, eu quero poder visualizar informações sobre cada trilha do programa VEM SER."

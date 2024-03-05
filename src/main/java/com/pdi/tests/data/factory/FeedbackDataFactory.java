@@ -27,17 +27,11 @@ public class FeedbackDataFactory {
         Feedback feedback = new Feedback();
 
         if (wrongObject) {
-            feedback.setIdFeedbackModulo(generateRandom.nextInt(-10, -1));
-            feedback.setIdEstagiario(generateRandom.nextInt(-10, -1));
-            feedback.setIdInstrutor(generateRandom.nextInt(-10, -1));
-            feedback.setIdModulo(generateRandom.nextInt(-10, -1));
+            feedback.setId(generateRandom.nextInt(-10, -1));
             feedback.setFeedback(StringUtils.EMPTY);
         } else {
-            feedback.setIdFeedbackModulo(generateRandom.nextInt(1, 100));
-            feedback.setIdEstagiario(generateRandom.nextInt(1, 10));
-            feedback.setIdInstrutor(generateRandom.nextInt(1, 10));
-            feedback.setIdModulo(generateRandom.nextInt(1, 10));
-            feedback.setFeedback(faker.lorem().characters(255));
+            feedback.setId(generateRandom.nextInt(1, 10));
+            feedback.setFeedback(faker.lorem().characters(50));
         }
 
         return feedback;

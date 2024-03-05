@@ -4,8 +4,7 @@ import com.pdi.tests.client.EstagiarioClient;
 import com.pdi.tests.model.enums.StatusEnum;
 import com.pdi.tests.model.responses.EstagiarioResponse;
 import com.pdi.tests.model.responses.EstagiarioTrilhaResponse;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Owner;
+import io.qameta.allure.*;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -20,7 +19,9 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Retornar apenas um estagiário com a paginação")
     public void testValidateAValidCaseOfListAllEstagiariosFunctional() {
         EstagiarioResponse estagiarioResponse = estagiarioClient.searchAllWithPagination("1", "1")
@@ -44,7 +45,9 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Retornar uma página de estagiários")
     public void testSearchEstagiariosByPageFunctional() {
         EstagiarioResponse estagiarioResponse = estagiarioClient.searchAllWithPagination("1", "10")
@@ -68,7 +71,9 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Retornar todos os estagiários")
     public void testSearchAllEstagiariosFunctional() {
         EstagiarioResponse estagiarioResponse = estagiarioClient.searchAll()
@@ -93,7 +98,9 @@ public class EstagiarioFunctionalTest {
 
     @Test
     @Epic("Estagiário")
+    @Story("US002 - Dashboard")
     @Owner("Bruno Moraes Scarpari")
+    @Severity(SeverityLevel.MINOR)
     @DisplayName("Contar estagiários por trilha")
     public void testCountEstagiarioPerTrilhaFunctional() {
         List<EstagiarioTrilhaResponse> estagiarioTrilhaResponseList = estagiarioClient.countEstagiariosByTrilha()
