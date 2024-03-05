@@ -2,18 +2,15 @@
 .vscode
 .idea
 
-# Ignorar todos os arquivos em src/main/resources
-src/main/resources/*
+# Ignorar applicaton properties
+src/main/resources/
 
 # Com exceção de example.properties
 !src/main/resources/example.properties
 
-### Relatório - Postman - Newman ###
+### Relatórios  ###
 postman/newman/*
-
-### dotenv ###
-.env
-
+allure-results
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,windows,java,visualstudiocode,jetbrains
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,windows,java,visualstudiocode,jetbrains
